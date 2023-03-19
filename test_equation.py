@@ -1,4 +1,6 @@
 import pytest
+import sys
+
 from modules.math_eq import count_velocity
 
 
