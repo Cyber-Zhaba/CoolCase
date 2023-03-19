@@ -75,7 +75,7 @@ class DaysResource(Resource):
         return jsonify({'success': 'OK'})
 
 
-class SitesListResource(Resource):
+class DaysListResource(Resource):
     def __init__(self) -> None:
         """Create sqldb parser"""
         self.session = db_session.create_session()
