@@ -1,9 +1,9 @@
 from flask import Flask, redirect, request, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField
+from modules.data import db_session
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'SECRET'
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -37,4 +37,5 @@ def count_page(token):
 
 
 if __name__ == '__main__':
+    db_session.global_init('data.db')
     app.run(port=8080, host='127.0.0.1')

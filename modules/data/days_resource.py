@@ -1,8 +1,7 @@
 from flask_restful import Resource, reqparse, abort
 from flask import jsonify, Response
-from data import db_session
-from data.days import Days
-from sqlalchemy import func
+from modules.data import db_session
+from modules.data.days import Days
 
 
 class DaysResource(Resource):
@@ -75,7 +74,7 @@ class DaysResource(Resource):
         return jsonify({'success': 'OK'})
 
 
-class SitesListResource(Resource):
+class DaysListResource(Resource):
     def __init__(self) -> None:
         """Create sqldb parser"""
         self.session = db_session.create_session()
