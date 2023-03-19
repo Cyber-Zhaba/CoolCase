@@ -1,4 +1,5 @@
 from flask import Flask, redirect, request, render_template
+from modules.data import db_session
 
 app = Flask(__name__)
 
@@ -18,4 +19,5 @@ def count_page(token):
 
 
 if __name__ == '__main__':
+    db_session.global_init('data.db')
     app.run(port=8080, host='127.0.0.1')

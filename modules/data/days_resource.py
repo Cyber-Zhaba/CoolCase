@@ -1,8 +1,7 @@
 from flask_restful import Resource, reqparse, abort
 from flask import jsonify, Response
-from data import db_session
-from data.days import Days
-from sqlalchemy import func
+from modules.data import db_session
+from modules.data.days import Days
 
 
 class DaysResource(Resource):

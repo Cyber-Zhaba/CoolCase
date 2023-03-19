@@ -1,6 +1,6 @@
 import sqlalchemy
 from sqlalchemy_serializer import SerializerMixin
-from data.db_session import SqlAlchemyBase
+from modules.data.db_session import SqlAlchemyBase
 
 
 class Days(SqlAlchemyBase, SerializerMixin):
