@@ -77,8 +77,8 @@ def count_route_max_speed(points: dict) -> list:
             distance -= v
             days += 1
             fuel += w_omega + t
-        route.append({'ox': ox_now_, 'sh': now_population, 'days': days,
-                      'fuel': fuel, 'credits_need': round(ox_now_ * 7 + fuel * 10)})
+        route.append({'ox': min(ox_all), 'sh': now_population, 'days': days,
+                      'fuel': fuel, 'credits_need': round(min(ox_all) * 7 + fuel * 10)})
     return route
 
 
