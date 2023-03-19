@@ -1,6 +1,8 @@
 import numpy as np
 import requests
 
+print(requests.get('https://dt.miet.ru/ppo_it_final', headers={'X-Auth-Token': '38xdyf6f'}).json()['message'])
+
 
 def count_velocity(v_max, w_engine, weight):
     return v_max * (w_engine / 80) * (200 / weight)
