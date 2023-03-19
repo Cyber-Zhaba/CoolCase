@@ -19,10 +19,39 @@
         <h6 style="margin-left: 20px">Рессурсы:</h6>
         <h6 style="margin-left: 40px">SH ...</h6>
         <h6 style="margin-left: 40px">Топливо ...</h6>
-        <h6 style="margin-left: 40px">Кислород ...</h6>
+        <h6 style="margin-left: 20px">Кислород ...</h6>
     </div>
     <div>
-        Редактирование конкретного дня
+        <form method="post">
+            {{ form_1.hidden_tag() }}
+            <p>
+            <h4>Точка маршрута:</h4>
+            <br>
+                {{ form_1.point(class="form_control", type="SH") }}
+            </br>
+            <p>
+                <button type="submit" class="btn btn-primary">Получить</button>
+            </p>
+        </form>
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.SH.label }}
+                <br>
+                {{ form.SH(class="form-control", type="SH") }}
+                <br>
+            </p>
+
+                {{ form.fuel.label }}
+                <br>
+                {{ form.fuel(class="form-control", type="fuel") }}
+                <br>
+
+            <p>
+                <button id="edit" type="submit" name="edit">Редактировать</button>
+            </p>
+            </p>
+        </form>
     </div>
 </div>
 </body>
